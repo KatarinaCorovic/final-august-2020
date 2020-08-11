@@ -13,99 +13,104 @@
       </v-row>
 
       <div class="ourServices">
-        
+        <h1>Our Services</h1>
       <v-row justify="center">
         <v-col cols="12" md="3" justify="center" align="center">
           <div class="about">
             <img src="../assets/worker.jpg" alt="">
-            <h2>Cao</h2>
+            <h2>Our people</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, nt optio a necessitatibus inventore eligendi non mollitia nam!</p> 
-              <v-btn
-                color="success"
-                class="mt-12 readMoreButton " 
-                @click="overlay = !overlay"
-                  >
-               Read More
-              </v-btn>
+              <v-row justify="center">
+        <v-btn
+          color="success"
+          class="mt-12"
+          @click="overlay = !overlay"
+        >
+          Read More
+        </v-btn>
 
-              <v-overlay
-                :absolute="absolute"
-                :value="overlay"
-              >
-              <v-card height="700" width="800">
-                    <v-overlay :value="overlay">
-              <v-btn
+        <v-overlay
+          :absolute="absolute"
+          :value="overlay"
+        >
+       <v-card height="700"
+        width="800"
+         class="form">
+         <v-btn
                 icon
                 @click="overlay = false"
               >
-                <v-icon>mdi-close</v-icon>
+                <v-icon class="close">mdi-close</v-icon>
               </v-btn>
-              </v-overlay>
-              </v-card>
-                </v-overlay>
-      
+             </v-card>
+        </v-overlay>
+      </v-row>
           </div>
           </v-col> 
        
           <v-col cols="12" md="3" justify="center" align="center">
           <div class="about">
-            <img src="../assets/worker.jpg" alt="">
-            <h2>Hello</h2>
+            <img src="../assets/cargos.jpg" alt="">
+            <h2>Import</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus molestias beaerunt quam!</p>
-            <v-btn
-                color="success"
-                class="mt-12 readMoreButton" 
-                @click="overlay = !overlay"
-                  >
-               Read More
-              </v-btn>
+            <v-row justify="center">
+        <v-btn
+          color="success"
+          class="mt-12"
+          @click="overlay = !overlay"
+        >
+          Read More
+        </v-btn>
 
-              <v-overlay
-                :absolute="absolute"
-                :value="overlay"
-              >
-              <v-card height="700" width="800">
-                    <v-overlay :value="overlay">
-              <v-btn
+        <v-overlay
+          :absolute="absolute"
+          :value="overlay"
+        >
+       <v-card height="700"
+        width="800"
+         class="form">
+         <v-btn
                 icon
                 @click="overlay = false"
               >
-                <v-icon>mdi-close</v-icon>
+                <v-icon class="close">mdi-close</v-icon>
               </v-btn>
-              </v-overlay>
-              </v-card>
-                </v-overlay>
+             </v-card>
+        </v-overlay>
+      </v-row>
             </div>
             </v-col>
          
             <v-col cols="12" md="3" justify="center" align="center">
           <div class="about">
-            <img src="../assets/worker.jpg" alt="">
-            <h2>Mrvica</h2>
+            <img src="../assets/shipInPort.jpg" alt="">
+            <h2>Ports </h2>
             <p>Lorem ipsum dolor sit ame=um impedit id. Itaque, quos?</p>
-                    <v-btn
-                        color="success"
-                        class="mt-12 readMoreButton" 
-                        @click="overlay = !overlay"
-                          >
-                      Read More
-                      </v-btn>
+                    <v-row justify="center">
+        <v-btn
+          color="success"
+          class="mt-12"
+          @click="overlay = !overlay"
+        >
+          Read More
+        </v-btn>
 
-                      <v-overlay
-                        :absolute="absolute"
-                        :value="overlay"
-                      >
-                      <v-card height="700" width="800">
-                            <v-overlay :value="overlay">
-                      <v-btn
-                        icon
-                        @click="overlay = false"
-                      >
-                        <v-icon>mdi-close</v-icon>
-                    </v-btn>
-                  </v-overlay>
-                </v-card>
-              </v-overlay>
+        <v-overlay
+          :absolute="absolute"
+          :value="overlay"
+        >
+       <v-card height="700"
+        width="800"
+         class="form">
+         <v-btn
+                icon
+                @click="overlay = false"
+              >
+                <v-icon class="close">mdi-close</v-icon>
+              </v-btn>
+             </v-card>
+        </v-overlay>
+      </v-row>
             </div>
           </v-col>
         </v-row>
@@ -139,7 +144,7 @@ export default {
      background-image: url(../assets/cargoship.jpg);
      min-height: 550px;
      background-size: cover;
-     background-position-y: -350px;
+     background-position-y: -100px;
      position: relative;
 
      .button{
@@ -153,7 +158,7 @@ export default {
 
   .picture{
     background-image: url(../assets/cargo.jpg);
-    min-height: 200px;
+    height: 200px;
     background-size: cover;
     background-position-y: -350px;
     opacity:0.5;
@@ -161,8 +166,7 @@ export default {
   }
 
   .icons{
-     
-    min-height:150px; 
+    height:150px; 
     background-color: #ada0a0;
     // opacity:0.5;
   }
@@ -190,6 +194,30 @@ export default {
       margin-left:150px;
 
       }
+
+      .form{
+        background-color: white;
+      }
+
+      .close{
+        color:grey;
+      }
+    }
+  }
+
+   @media only screen and (max-width:600px){
+      .cover{
+        background-position-y: -150px;
+        background-position-x:-150px;
+      
+      }
+  }
+
+  @media only screen and (max-width:600px){
+    .picture{
+      background-position-y: -150px;
+        background-position-x:-150px;
+      height:500px;
     }
   }
 

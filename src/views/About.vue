@@ -1,11 +1,30 @@
 <template>
-  <v-app>
+  <v-container fluid>
+    <v-app class="cover">
+    
     <v-row>
-      <v-col cols="12">
-      <div class="cover"></div>
+      <v-col cols="12" md="6">
+        <div class="about">
+          <h1>About us</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ofprovident dignissimos qui? Sed vs qudantium aut.</p>
+        </div>
       </v-col>
+        <v-col cols="12" md="6">
+        <div class="company">
+          <h1>Company</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ofprovident dignissimos qui? Sed vs qudantium aut.</p>
+        </div>
+          </v-col>
+        <!-- <div class="place">
+          <h1>Where we are</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ofprovident dignissimos qui? Sed vs qudantium aut.</p>
+        </div> -->
     </v-row>
-    <v-row justify="center">
+
+
+
+
+    <!-- <v-row justify="center">
         <v-btn
           color="success"
           class="mt-12"
@@ -25,70 +44,13 @@
               >
                 <v-icon>mdi-close</v-icon>
               </v-btn>
-             
-              
-          
-            
-          
-          <!-- <v-form class="form">
-                        <v-row>
-                            <v-col cols=12 md="5">
-                                <div class="input">
-                                    <v-text-field outlined label="Ship name" autofocus="true"></v-text-field>
-                                </div>
-                            </v-col>
-                        </v-row>
-                        <v-row>
-                            <v-col cols="12" md="5">
-                                <div class="input">
-                                    <v-text-field outlined label="Departure Port"></v-text-field>
-                                </div>
-                            </v-col>
-                        
-                            <v-col cols="12" md="5">
-                                <div class="input">
-                                    <v-text-field outlined label="Arrival Port" ></v-text-field>
-                                </div>
-                            </v-col>
-                        </v-row>
-                        <v-row>
-                            <v-col cols="12" md="5">
-                        <div class="input">
-                            <v-text-field outlined label="Number of cargo"></v-text-field>  
-                        </div>
-                        </v-col>
-                        <v-col cols="12" md="5">
-                        <div class="input">
-                            <v-text-field outlined label="Type of cargo" ></v-text-field>
-                        </div>
-                        </v-col>
-                        </v-row>
-                <v-row>
-                     <v-col cols="12" md="5">
-                        <div class="input">
-                            <v-text-field outlined label="Departure Date" ></v-text-field>
-                        </div>
-                    </v-col>
-                    <v-col cols="12" md="5">
-                        <div class="input">
-                            <v-text-field outlined label="Arrival Date" ></v-text-field>
-                        </div>
-                    </v-col>
-                </v-row>
-                <v-row>
-                    <v-col cols="12" md="5" justify="center" align="center">
-                        <v-btn>SUBMIT</v-btn>
-
-                    </v-col>
-                </v-row>
-
-                    </v-form> -->
-           
-      </v-card>
+          </v-card>
         </v-overlay>
       </v-row>
+               -->
  
-  </v-app>
+    </v-app>
+  </v-container>
 </template>
 
 
@@ -108,16 +70,140 @@ export default {
 
 
    .cover{
-     background-image: url(../assets/cargoship.jpg);
-     min-height: 550px;
-     background-size: cover;
-     background-position-y: -350px;
-     position: relative;
-     opacity:0.3;
+
+        background-image: url(../assets/cargoship.jpg);
+        min-height: 400px;
+        background-size: cover;
+        background-size: 100% 700px;
+       //  background-position-y: -250px;
+        background-repeat: no-repeat;
+        position: relative;
+        // opacity:0.5;
    }
 
-   .form{
-     background-color: red;
+   .about{
+     width: 300px;
+     height:300px;
+     border-radius: 50%;
+     background-color: white;
+     transition:1s, width;
+     margin-left:250px;
+     margin-top:50px;
+     
+
+        h1{
+          padding-top:30px;
+          padding-left:80px;
+        }
+
+        p{
+          padding:30px;
+        }
+
+
+
    }
 
+   .about:hover{
+        transition:1s, width;
+        width:700px;
+        height:250px;
+        border-radius:20px;
+        // background-color:yellow;
+        transition-duration:1s;
+        // transition-delay:1s;
+        transition-timing-function: linear;
+       
+
+   }
+
+   .company{
+      width: 300px;
+     height:300px;
+     border-radius: 50%;
+     background-color: white;
+     transition:1s, width;
+     margin-top:330px;
+    
+
+      h1{
+          padding-top:30px;
+          padding-left:80px; 
+        }
+
+        p{
+          padding:30px;
+        }
+
+
+   }
+
+   .company:hover{
+        transition:1s, width;
+        width:700px;
+        height:250px;
+        border-radius:20px;
+        // background-color:yellow;
+        transition-duration:1s;
+        // transition-delay:1s;
+        transition-timing-function: linear;
+       
+   }
+
+   .place{
+         width: 300px;
+         height:300px;
+         border-radius: 50%;
+         background-color: white;
+         transition:1s, width;
+         margin-left:300px;
+         
+         box-shadow: 2px 0px 2px 2px grey;
+
+         h1{
+          padding-top:30px;
+          padding-left:50px;
+        }
+
+        p{
+          padding:30px;
+        }
+
+
+   }
+
+
+   .place:hover{
+        transition:1s, width;
+        width:500px;
+        height:250px;
+        border-radius:20px;
+        // background-color:yellow;
+        transition-duration:1s;
+        // transition-delay:1s;
+        transition-timing-function: linear;
+       
+   }
+
+
+  @media only screen and (max-width:600px){
+     .about{
+         width:450px;
+         height:500px;
+         
+
+     }
+ }
+
+   @media only screen and (max-width:600px){
+     .company{
+         width:450px;
+         height:500px;
+
+     }
+ }
+   
+   
+
+  
 </style>
