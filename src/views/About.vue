@@ -76,11 +76,27 @@
 
                     <v-card-text>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse cum, voluptate blanditiis odio, 
-                    sapiente est quisquam natus explicabo eligendi temporibus impedit vel laudantium quibusdam incidunt ratione.
+                    sapiente est.
                     </v-card-text>
-                    <v-divider class="mx-4"></v-divider>
-                      <v-card-title>Tonight's availability</v-card-title>
-                      <v-card-actions></v-card-actions>
+  
+                      <v-card-actions>
+                       <v-btn
+                        icon
+                        @click="show = !show"
+                      >
+                        <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+                      </v-btn>
+                    </v-card-actions>
+
+                    <v-expand-transition>
+                      <div v-show="show">
+                        <v-divider></v-divider>
+
+                        <v-card-text>
+                          I'm a thing. But, like most politicians, he promised more than he could deliver. The bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
+                        </v-card-text>
+                      </div>
+                    </v-expand-transition>
                   </v-card>
             </v-col>
 
@@ -104,12 +120,28 @@
                     ></v-img>
                     <v-card-title>Importing</v-card-title>
                       <v-card-text>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis impedit excepturi ab quam, 
-                        reiciendis debitis tempore unde totam ex eveniet, ut labore dignissimos ea, voluptatum provident aperiam ipsa excepturi ab quam. 
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                       Simos ea, voluptatum provident aperiam ipsa excepturi ab quam. 
                       </v-card-text>
-                      <v-divider class="mx-4"></v-divider>
-                    <v-card-title>Tonight's availability</v-card-title>
-                  <v-card-actions></v-card-actions>
+                  
+                      <v-card-actions>
+                       <v-btn
+                        icon
+                        @click="showBtn = !showBtn"
+                      >
+                        <v-icon>{{ showBtn ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+                      </v-btn>
+                    </v-card-actions>
+
+                    <v-expand-transition>
+                      <div v-show="showBtn">
+                        <v-divider></v-divider>
+
+                        <v-card-text>
+                          I'm a thing. But, like most politicians, he promised more than he could deliver. The bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
+                        </v-card-text>
+                      </div>
+                    </v-expand-transition>
               </v-card>
             </v-col>
           </v-row>
@@ -125,6 +157,9 @@ export default {
    data: () => ({
       absolute: true,
       overlay: false,
+      show: false,
+      showBtn:false,
+      
     }),
 }
 </script>
