@@ -7,105 +7,113 @@
             <v-btn depressed color="#ffb32a" class="button">PLACE THE ORDER</v-btn>
           </div>
             <i class="fas fa-ship"></i>
-            <div class="picture"></div>
+      
+            <div class="picture" >
+      
+              <v-btn fab color="#0a3158"><v-icon>mdi-domain</v-icon></v-btn>
+              <v-btn fab color="#0a3158"><v-icon>mdi-vuetify</v-icon></v-btn> 
+              <v-btn fab color="#0a3158"><v-icon>mdi-heart</v-icon></v-btn>
+              <v-btn fab color="#0a3158"><v-icon>mdi-format-list-bulleted-square</v-icon></v-btn>
+        
+            </div>
             <div class="icons"></div>
-        </v-col>
+              </v-col>
       </v-row>
 
-      <div class="ourServices">
-        <h1>Our Services</h1>
+            <div class="ourServices">
+              <h1>Our Services</h1>
       <v-row justify="center">
         <v-col cols="12" md="3" justify="center" align="center">
-          <div class="about">
-            <img src="../assets/worker.jpg" alt="">
-            <h2>Our people</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, nt optio a necessitatibus inventore eligendi non mollitia nam!</p> 
-              <v-row justify="center">
-        <v-btn
-          color="success"
-          class="mt-12"
-          @click="overlay = !overlay"
-        >
-          Read More
-        </v-btn>
+              <div class="about">
+                  <img src="../assets/worker.jpg" alt="">
+                  <h2>Our people</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, nt optio a necessitatibus inventore eligendi non mollitia nam!</p> 
+      <v-row justify="center">
+                  <v-btn
+                    color="success"
+                    class="mt-12"
+                    @click="overlay = !overlay"
+                  >
+                    Read More
+                  </v-btn>
 
-        <v-overlay
-          :absolute="absolute"
-          :value="overlay"
-        >
-       <v-card height="700"
-        width="800"
-         class="form">
-         <v-btn
-                icon
-                @click="overlay = false"
-              >
-                <v-icon class="close">mdi-close</v-icon>
-              </v-btn>
-             </v-card>
-        </v-overlay>
-      </v-row>
-          </div>
-          </v-col> 
-       
-          <v-col cols="12" md="3" justify="center" align="center">
-          <div class="about">
-            <img src="../assets/cargos.jpg" alt="">
-            <h2>Import</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus molestias beaerunt quam!</p>
-            <v-row justify="center">
-        <v-btn
-          color="success"
-          class="mt-12"
-          @click="overlay = !overlay"
-        >
-          Read More
-        </v-btn>
-
-        <v-overlay
-          :absolute="absolute"
-          :value="overlay"
-        >
-       <v-card height="700"
-        width="800"
-         class="form">
-         <v-btn
-                icon
-                @click="overlay = false"
-              >
+                  <v-overlay
+                    :absolute="absolute"
+                    :value="overlay"
+                  >
+                <v-card height="700"
+                  width="800"
+                  class="form">
+                <v-btn
+                        icon
+                        @click="overlay = false"
+                      >
                 <v-icon class="close">mdi-close</v-icon>
               </v-btn>
              </v-card>
         </v-overlay>
       </v-row>
             </div>
+          </v-col> 
+       
+          <v-col cols="12" md="3" justify="center" align="center">
+            <div class="about">
+              <img src="../assets/cargos.jpg" alt="">
+              <h2>Import</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus molestias beaerunt quam!</p>
+        <v-row justify="center">
+              <v-btn
+                color="success"
+                class="mt-12"
+                @click="overlay = !overlay"
+              >
+                Read More
+              </v-btn>
+
+              <v-overlay
+                :absolute="absolute"
+                :value="overlay"
+              >
+            <v-card height="700"
+              width="800"
+              class="form">
+              <v-btn
+                      icon
+                      @click="overlay = false"
+                    >
+                <v-icon class="close">mdi-close</v-icon>
+              </v-btn>
+             </v-card>
+        </v-overlay>
+      </v-row>
+              </div>
             </v-col>
          
             <v-col cols="12" md="3" justify="center" align="center">
-          <div class="about">
-            <img src="../assets/shipInPort.jpg" alt="">
-            <h2>Ports </h2>
-            <p>Lorem ipsum dolor sit ame=um impedit id. Itaque, quos?</p>
-                    <v-row justify="center">
-        <v-btn
-          color="success"
-          class="mt-12"
-          @click="overlay = !overlay"
-        >
-          Read More
-        </v-btn>
+              <div class="about">
+                <img src="../assets/shipInPort.jpg" alt="">
+                <h2>Ports </h2>
+                <p>Lorem ipsum dolor sit ame=um impedit id. Itaque, quos?</p>
+        <v-row justify="center">
+                <v-btn
+                  color="success"
+                  class="mt-12"
+                  @click="overlay = !overlay"
+                >
+                  Read More
+                </v-btn>
 
-        <v-overlay
-          :absolute="absolute"
-          :value="overlay"
-        >
-       <v-card height="700"
-        width="800"
-         class="form">
-         <v-btn
-                icon
-                @click="overlay = false"
-              >
+                <v-overlay
+                  :absolute="absolute"
+                  :value="overlay"
+                >
+              <v-card height="700"
+                width="800"
+                class="form">
+                <v-btn
+                        icon
+                        @click="overlay = false"
+                      >
                 <v-icon class="close">mdi-close</v-icon>
               </v-btn>
              </v-card>
@@ -115,23 +123,19 @@
           </v-col>
         </v-row>
       </div>
-        
-
-    
-  
     </v-app>
   </v-container>
 </template>
 
 <script>
-
-
+ 
 
 export default {
   name: 'Home',
   data: () => ({
       absolute: true,
       overlay: false,
+      
     }),
     
   }
