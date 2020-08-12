@@ -1,54 +1,119 @@
 <template>
   <v-container fluid>
     <v-app class="cover">
-    
-    <v-row>
-      <v-col cols="12" md="6">
-        <div class="about">
-          <h1>About us</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ofprovident dignissimos qui? Sed vs qudantium aut.</p>
-        </div>
-      </v-col>
-        <v-col cols="12" md="6">
-        <div class="company">
-          <h1>Company</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ofprovident dignissimos qui? Sed vs qudantium aut.</p>
-        </div>
+        <v-row>
+          <v-col cols="12" md="6">
+            <div class="about">
+              <h1>About us</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ofprovident dignissimos qui? Sed vs qudantium aut.</p>
+            </div>
           </v-col>
-        <!-- <div class="place">
-          <h1>Where we are</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ofprovident dignissimos qui? Sed vs qudantium aut.</p>
-        </div> -->
-    </v-row>
+          <v-col cols="12" md="6">
+            <div class="company">
+              <h1>Company</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ofprovident dignissimos qui? Sed vs qudantium aut.</p>
+            </div>
+          </v-col>
+
+            <!-- //---------------    THREE DIVS -------------- -->
+
+        
+          </v-row>
+              <div class="aboutDivs">
+          <v-row>
+            <v-col cols="12" md="4">
+                <v-card
+                    max-width="344"
+                    class="mx-auto listOfPorts"
+                  >
+                      <v-list-item>
+                        <v-list-item-content>
+                          <v-list-item-title class="headline">Our Headquarters</v-list-item-title>
+                            <!-- <v-list-item-subtitle>by Kurt Wagner</v-list-item-subtitle> -->
+                        </v-list-item-content>
+                      </v-list-item>
+
+                        <v-img
+                          src="../assets/map.jpg"
+                          height="194"
+                        ></v-img>
+
+                        <v-card-title>List of ports:</v-card-title>
+                        <v-spacer></v-spacer>
+
+                          <v-card-subtitle class="pb-0"><li>Bay of Algeciras</li></v-card-subtitle>
+                          <v-card-subtitle class="pb-0"><li>Tarifa</li></v-card-subtitle>
+                          <v-card-subtitle class="pb-0"><li>Almería</li></v-card-subtitle>
+                          <v-card-subtitle class="pb-0"><li>Seville</li></v-card-subtitle>
+                          <v-card-subtitle class="pb-0"><li>Málaga</li></v-card-subtitle>
+                          <v-card-subtitle class="pb-0"><li>Ceuta</li></v-card-subtitle>
+                    
+                        <v-divider vertical></v-divider>
+                </v-card>
+            </v-col>
+
+            <!---------------------- // SECOND DIV ---------------------->
 
 
+            <v-col cols="12" md="4">
+                <v-card
+                  max-width="344"
+                  class="mx-auto efficiencyCard"
+                >
+                  <v-list-item>
+                    <v-list-item-content>
+                      <v-list-item-title class="headline">Efficiency</v-list-item-title>
+                      <!-- <v-list-item-subtitle>by Kurt Wagner</v-list-item-subtitle> -->
+                    </v-list-item-content>
+                  </v-list-item>
+
+                  <v-img
+                    src="../assets/workers.jpg"
+                    height="194"
+                  ></v-img>
+
+                    <v-card-title>How its done</v-card-title>
+
+                    <v-card-text>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse cum, voluptate blanditiis odio, 
+                    sapiente est quisquam natus explicabo eligendi temporibus impedit vel laudantium quibusdam incidunt ratione.
+                    </v-card-text>
+                    <v-divider class="mx-4"></v-divider>
+                      <v-card-title>Tonight's availability</v-card-title>
+                      <v-card-actions></v-card-actions>
+                  </v-card>
+            </v-col>
+
+                     
+                 <!------------------ //THIRD DIV ------------------>
 
 
-    <!-- <v-row justify="center">
-        <v-btn
-          color="success"
-          class="mt-12"
-          @click="overlay = !overlay"
-        >
-          Show Overlay
-        </v-btn>
-
-        <v-overlay
-          :absolute="absolute"
-          :value="overlay"
-        >
-       <v-card height="700" width="800" class="form">
-         <v-btn
-                icon
-                @click="overlay = false"
-              >
-                <v-icon>mdi-close</v-icon>
-              </v-btn>
-          </v-card>
-        </v-overlay>
-      </v-row>
-               -->
- 
+            <v-col cols="12" md="4">
+                <v-card
+                  max-width="344"
+                  class="mx-auto howWeWork"
+                  >
+                    <v-list-item>
+                      <v-list-item-content>
+                        <v-list-item-title class="headline">Port import</v-list-item-title>
+                         </v-list-item-content>
+                      </v-list-item>
+                    <v-img
+                        src="../assets/ourPort.jpg"
+                        height="194"
+                    ></v-img>
+                    <v-card-title>Importing</v-card-title>
+                      <v-card-text>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis impedit excepturi ab quam, 
+                        reiciendis debitis tempore unde totam ex eveniet, ut labore dignissimos ea, voluptatum provident aperiam ipsa excepturi ab quam. 
+                      </v-card-text>
+                      <v-divider class="mx-4"></v-divider>
+                    <v-card-title>Tonight's availability</v-card-title>
+                  <v-card-actions></v-card-actions>
+              </v-card>
+            </v-col>
+          </v-row>
+        </div>
     </v-app>
   </v-container>
 </template>
@@ -183,6 +248,29 @@ export default {
         // transition-delay:1s;
         transition-timing-function: linear;
        
+   }
+
+   .aboutDivs{
+
+   .listOfPorts{
+     margin-top:100px;
+    
+
+    }
+
+    .efficiencyCard{
+      margin-top:100px;
+   
+       
+
+    }
+
+       .howWeWork {
+         margin-top:100px;
+     
+
+    }
+
    }
 
 

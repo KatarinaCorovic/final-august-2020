@@ -118,7 +118,7 @@ export default {
     //  background-position-y: -250px;
      background-repeat: no-repeat;
      position: relative;
-    //  opacity:0.5;
+     opacity:0.5;   
 
 h1{
     color:white;

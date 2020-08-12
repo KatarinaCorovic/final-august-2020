@@ -6,7 +6,7 @@
     tile
   > -->
     <v-toolbar color=#0a3158>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      
       <h1>MAGNA</h1>
       <img src="../assets/cargo-ship.png" alt="" class="ship">  
 
