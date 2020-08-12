@@ -40,6 +40,22 @@
 
                         <v-card-title>List of ports:</v-card-title>
                         <v-spacer></v-spacer>
+                         <v-card-actions>
+                       <v-btn
+                        icon
+                        @click="show = !show"
+                      >
+                        <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+                      </v-btn>
+                    </v-card-actions>
+
+                    <v-expand-transition>
+                      <div v-show="show">
+                        <v-divider></v-divider>
+
+                        <v-card-text>
+                          <v-row>
+                          <v-col cols="12" md="6">
 
                           <v-card-subtitle class="pb-0"><li>Bay of Algeciras</li></v-card-subtitle>
                           <v-card-subtitle class="pb-0"><li>Tarifa</li></v-card-subtitle>
@@ -47,7 +63,24 @@
                           <v-card-subtitle class="pb-0"><li>Seville</li></v-card-subtitle>
                           <v-card-subtitle class="pb-0"><li>Málaga</li></v-card-subtitle>
                           <v-card-subtitle class="pb-0"><li>Ceuta</li></v-card-subtitle>
-                    
+                          </v-col>
+
+                          <v-col cols="12" md="6">
+
+                          <v-card-subtitle class="pb-0"><li>Valencia</li></v-card-subtitle>
+                          <v-card-subtitle class="pb-0"><li>Sagunto</li></v-card-subtitle>
+                          <v-card-subtitle class="pb-0"><li>Gandía</li></v-card-subtitle>
+                          <v-card-subtitle class="pb-0"><li>Melilla</li></v-card-subtitle>
+                          <v-card-subtitle class="pb-0"><li>Barcelona</li></v-card-subtitle>
+                          <v-card-subtitle class="pb-0"><li>Pasaia</li></v-card-subtitle>
+                          </v-col>
+
+
+                    </v-row>
+                        </v-card-text>
+                      </div>
+                    </v-expand-transition>
+                        
                         <v-divider vertical></v-divider>
                 </v-card>
             </v-col>
@@ -82,14 +115,14 @@
                       <v-card-actions>
                        <v-btn
                         icon
-                        @click="show = !show"
+                        @click="showPorts = !showPorts"
                       >
-                        <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+                        <v-icon>{{ showPorts ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
                       </v-btn>
                     </v-card-actions>
 
                     <v-expand-transition>
-                      <div v-show="show">
+                      <div v-show="showPorts">
                         <v-divider></v-divider>
 
                         <v-card-text>
@@ -159,6 +192,7 @@ export default {
       overlay: false,
       show: false,
       showBtn:false,
+      showPorts:false,
       
     }),
 }

@@ -1,10 +1,5 @@
 <template>
- <!-- <v-card
-    color="grey lighten-4"
-    flat
-    height="200px"
-    tile
-  > -->
+
     <v-toolbar color=#0a3158>
       
       <h1>MAGNA</h1>
@@ -19,7 +14,31 @@
               <router-link to="/contact"><span>CONTACT</span></router-link>
          </nav>
     </v-toolbar>
-  <!-- </v-card>   -->
+
+      <!-- <div class="text-center">
+    <v-menu offset-y>
+      <template v-slot:activator="{ on, attrs }">
+       <v-btn
+          color="primary"
+          dark
+          v-bind="attrs"
+          v-on="on"
+        >
+          <v-app-bar-nav-icon></v-app-bar-nav-icon>
+        </v-btn>
+      </template>
+      <v-list>
+        <router-link><v-list-item
+          v-for="(item, index) in items"
+          :key="index" 
+        >
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
+          <v-list-item-route>{{ item.route }}</v-list-item-route>
+        </v-list-item></router-link> 
+      </v-list>
+    </v-menu>
+  </div> -->
+ 
  
 
 </template>
@@ -28,7 +47,15 @@
 
 <script>
 export default {
-    name:'Header'
+    name:'Header',
+    //   data: () => ({
+    //   items: [
+    //     { title: 'HOME', route:'/', },
+    //     { title: 'ABOUT US', route:'/about', },
+    //     { title: 'ORDERS LIST', route:'/newOrder', },
+    //     { title: 'CONTACT', route:'/contact', },
+    //   ],
+    // }),
   
 }
 </script>
