@@ -7,7 +7,14 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Instructions for the Backend part - WBD5100:
+
+- Clone the reposytory and open preferably in PHP Strome code editor.
+- Then open sql file attached.
+- Run your development inveroment (Laragon, Laravel...)
+- Open the Backend folder and input in terminal: Php -S localhost:8087
+- Now your project had been opened with the adress: http://localhost:8087/
+
 ```
 npm run serve
 ```
