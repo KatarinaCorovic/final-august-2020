@@ -26,10 +26,4 @@ npm install
 - and then initialize the server with:
 npm run serve
 - Open the localhost url presented
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
