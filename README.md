@@ -1,4 +1,4 @@
-# final-august-2020
+# Final project - august 2020
 
 ## Project setup
 ```
