@@ -1,6 +1,8 @@
 # Final project - august 2020
 
-### This project consists of both frontend and backend part. It was combined as one idea. Frontend part was made in Visual Code Studio, with Vue.js and Vuetify.
+### This project consists of both frontend and backend part, so it was combined as one idea. 
+* Frontend part was made in Visual Code Studio, with Vue.js and Vuetify.
+* Backend was made with PHP and SQL.
 ```
 npm install
 ```
