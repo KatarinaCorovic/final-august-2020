@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import NewOrder from '../views/NewOrder.vue'
 import Contact from '../views/Contact.vue'
 
+
 Vue.use(VueRouter)
 
   const routes = [
@@ -29,7 +30,8 @@ Vue.use(VueRouter)
     path:'/contact',
     name:'Contact',
     component: Contact
-  }
+  },
+
 ]
 
 const router = new VueRouter({
