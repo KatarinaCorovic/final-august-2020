@@ -4,7 +4,7 @@
       <v-row>
         <v-col cols="12" class="pa-0 ma-0">
           <div class="cover">
-            <div class="button">
+            <div class="newOrderButton">
               <router-link to="/newOrder"><v-btn depressed color="#ffb32a" class="orderBtn">PLACE AN ORDER</v-btn></router-link>
             </div>
           </div>
@@ -124,15 +124,16 @@ export default {
    
   }
 
-.button {
+.newOrderButton {
     margin:0 auto;
     text-align:center;                   
     padding-top:400px;
-
-a {
-  text-decoration-style: none;
-
 }
+
+.newOrderButton  a {
+  text-decoration: none;
+
+
 }
 
 .picture {
