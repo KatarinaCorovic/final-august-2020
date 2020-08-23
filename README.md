@@ -5,9 +5,11 @@
 
 
 ### Instructions for the Frontend part - WBD5204:
+- Make sure you open the backend repo first, most importantly sql.
 - When you open the frontend folder enter in your terminal next commands:
 npm install
 - and then initialize the server with:
 npm run serve
 - Open the localhost url presented
+
 
