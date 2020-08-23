@@ -146,19 +146,40 @@ export default {
     },
 
 methods:{
-    validate () {
-    this.$refs.form.validate()
+   validate () {
+    var messageForm = this.$refs.form.validate()
+    if(messageForm == true){
+    this.submit()
     this.visibility = true;
+
     
     }
 },
 
-mounted(){
-    axios.post('http://localhost:8080/api/info', {
-        
+submit(){
+    axios
+    .post('http://localhost:8087/messages', {
+        messageData:{
+            id:null,
+            name:this.name,
+            address:this.address,
+            phone:this.phone,
+            company:this.company,
+            message:this.message,
+            
+        }
     })
 
-    }
+    .then(function(response){
+        console.log(response.data)
+    })
+    .catch(function (error){
+        console.log(error)
+    })
+        
+  }
+}
+
 }
 </script>
 
@@ -203,16 +224,20 @@ h2{
 
 .sentInfo {
     border:1px solid black;
-    background-color: rgb(240, 234, 234);
+    background-color: #164370;
     z-index:1;
     position:absolute;
-    top:0;
-    left:0;
-    height:100%;
-    width:100%;
+    top:205px;
+    left:280px;
+    height:400px;
+    width:800px;
+    color:white;    
 
 h2 {
     text-align: center;
+}
+p {
+    color:rgb(196, 187, 187);
 }
 }
 

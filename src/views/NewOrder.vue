@@ -9,7 +9,7 @@
                             <v-row>
                                 <v-col cols=12 md="6">
                                     <h2>Ship name: </h2>
-                                    <p>{{name}}</p>
+                                    <p>{{shipName}}</p>
                                 </v-col>
                             </v-row>
                             <v-row>
@@ -56,7 +56,7 @@
                                         autofocus="true" 
                                         :rules="[v => !!v || 'This field is required']"
                                         required
-                                        v-model="name"
+                                        v-model="shipName"
                                         ></v-text-field>
                                     </div>
                                 </v-col>
@@ -135,7 +135,16 @@
                             </v-row>
                             <v-row justify="center" align="center">
                                 <v-col cols="12" md="6">
-                                    <v-btn  @click="validate" :class="{ red: !valid, green: valid }" class="submitButton" >SUBMIT</v-btn>
+                                    <v-btn @click="validate" :class="{ red: !valid, green: valid }" class="submitButton" >SUBMIT</v-btn>
+                                </v-col >
+                                <v-col cols="12" md="6">
+                                  <v-btn
+                                    color="error"
+                                    class="mr-4"
+                                    @click="reset"
+                                    >
+                                    Reset Form
+                                    </v-btn>
                                 </v-col>
                             </v-row>
                         </v-form>
@@ -161,18 +170,27 @@ export default {
 
 methods:{
     validate () {
-    this.$refs.form.validate()
+    var form = this.$refs.form.validate()
+    if(form == true){
+    this.submitData()
     this.visibility = true;
-    console.log('cao');
 
     }
+    
+    
+    },
+
+    reset () {
+    this.$refs.form.reset()
+    },
 },
-mounted(){
+
+submitData(){
     axios
-    .post('http://localhost:8087/ships', {
+    .post('http://localhost:8087/forms', {
         formData:{
             id:null,
-            name:this.name,
+            shipName:this.shipName,
             dePort:this.dePort,
             arPort:this.arPort,
             number:this.number,
@@ -184,13 +202,13 @@ mounted(){
     })
 
     .then(function(response){
-        console.log(response)
+        console.log(response.data)
     })
     .catch(function (error){
         console.log(error)
     })
         
-    } 
+  }
 
 }
 </script>
@@ -237,7 +255,13 @@ h1 {
     height:100%;
     width:100%;
 
+p{
+    color:grey;
+}
+
  }
+
+
 
   
 </style>

@@ -36,7 +36,7 @@
                   <v-list-item
                     v-for="(value, index) in shipInfo" v-bind:key="index"
                   >
-                      <h3 v-text="value.name"></h3><v-spacer></v-spacer>
+                      <h3 v-text="value.shipName"></h3><v-spacer></v-spacer>
                       <h3 v-text="value.time_of_departure"></h3>
                   </v-list-item>
                 </v-list-item-group>
