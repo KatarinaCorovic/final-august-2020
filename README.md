@@ -14,7 +14,7 @@ npm run serve
 
 ## Side notes:
 
-Website uses cookie, when you enter it will show, otherwise remove it and refresh the page.
+- Website uses cookie, when you enter it will show, otherwise remove it and refresh the page.
 
 
 
