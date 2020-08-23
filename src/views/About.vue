@@ -1,8 +1,10 @@
 <template>
   <v-container fluid class="pa-0">
-    <v-app class="cover">
+    <v-app>
+      <div class="cover">
       <div class="aboutTitle">
         <h1>ABOUT US</h1>
+      </div>
       </div>
    
             <!-- //---------------    THREE DIVS -------------- -->
@@ -154,7 +156,6 @@
   </v-container>
 </template>
 
-
 <script>
 export default {
   name:'About',
@@ -173,83 +174,59 @@ export default {
 
 <style scoped lang="scss">
 
+.cover {
+    background-image: url(../assets/cargoship.jpg);
+    min-height: 550px;
+    background-size: cover;
+    background-position-y: -100px;
+            
+}
 
-   .cover{
-
-        background-image: url(../assets/cargoship.jpg);
-        background-repeat: no-repeat;
-        position: relative;
-        background-size: cover;
-        background-size: 100%;
-        
-   }
-
-   .aboutTitle{
-     z-index:1;
-     position: relative;
+.aboutTitle {
+    z-index:1;
+    position: relative;
   
+}
 
-        h1{
-          padding-top:30px;
-          color: rgb(233, 232, 219);
-          font-weight: normal;
-          font-size: 60px;
-          text-align: center;
-          z-index:2;
-        }
+.aboutTitle h1 {
+    padding-top:30px;
+    color: rgb(233, 232, 219);
+    font-weight: normal;
+    font-size: 60px;
+    text-align: center;
+    z-index:2;
+
+  }
     
-   }
+h1 {
+  text-align: center;
+  padding-top:20px;
+}
 
-      h1{
-          text-align: center;
-          padding-top:20px;
-        }
-
-        p{
-          padding:30px;
-        }
+p {
+  padding:30
+}
   
+.place {
+    width: 300px;
+    height:300px;
+    border-radius: 50%;
+    background-color: white;
+    transition:1s, width;
+     margin-left:300px;
+    box-shadow: 2px 0px 2px 2px grey;
 
-   .place{
-         width: 300px;
-         height:300px;
-         border-radius: 50%;
-         background-color: white;
-         transition:1s, width;
-         margin-left:300px;
-         
-         box-shadow: 2px 0px 2px 2px grey;
+h1 {
+  padding-top:30px;
+  padding-left:50px;
+  }
 
-         h1{
-          padding-top:30px;
-          padding-left:50px;
-        }
+p {
+  padding:30px;
 
-        p{
-          padding:30px;
-        }
+}
+}
 
-   }
-
-   .aboutDivs{
-     margin-top:500px;
-
-   .listOfPorts{
-     margin-top:100px;
   
-
-    }
-
-    .efficiencyCard{
-      margin-top:100px;
-   
-    }
-
-       .howWeWork {
-         margin-top:100px;
-     
-    }
-
-   }
   
 </style>
